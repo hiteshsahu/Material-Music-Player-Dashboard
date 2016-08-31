@@ -7,7 +7,7 @@ Can you code this UI concept - Inpired by https://dribbble.com/shots/2365362-A-o
 
 ## Proof of concept
 
-![Alt text](https://github.com/hiteshsahu/Bottom-Music-Player-Dashboard/blob/master/Art/concept_implement.gif "Implemnt")
+![Alt text](https://github.com/hiteshsahu/Bottom-Music-Player-Dashboard/blob/master/Art/concept_implementation.gif "Implemnt")
 
 
 
