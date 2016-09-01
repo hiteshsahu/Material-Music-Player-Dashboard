@@ -1,4 +1,5 @@
-# Bottom-Music-Player-Dashboard
+# Material Music Player Dashboard
+
 Can you code this UI concept - Inpired by https://dribbble.com/shots/2365362-A-or-B-Bottom-music-player-dashboard
 
 ## Ui Concept
@@ -9,6 +10,7 @@ Can you code this UI concept - Inpired by https://dribbble.com/shots/2365362-A-o
 
 ![Alt text](https://github.com/hiteshsahu/Bottom-Music-Player-Dashboard/blob/master/Art/concept_implementation.gif "Implemnt")
 
+Visit Site :- https://hiteshsahu.github.io/Material-Music-Player-Dashboard/. 
 
 
 Copyright 2015 Hitesh Kumar Sahu
