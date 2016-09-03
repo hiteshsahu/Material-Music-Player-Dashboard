@@ -1,17 +1,41 @@
 # Material Music Player Dashboard
 
-Can you code this UI concept - Inpired by https://dribbble.com/shots/2365362-A-or-B-Bottom-music-player-dashboard
+## What it is
 
-## Ui Concept
+Music Player based on Ui inspiration form [UpLabs Story - Can you code this UI concept]( https://dribbble.com/shots/2365362-A-or-B-Bottom-music-player-dashboard)
 
-![Alt text](https://github.com/hiteshsahu/Bottom-Music-Player-Dashboard/blob/master/Art/ui_concept.gif "Muse")
+### UI Concept
 
-## Proof of concept
+![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/ui_concept.gif "Muse")
 
-![Alt text](https://github.com/hiteshsahu/Bottom-Music-Player-Dashboard/blob/master/Art/concept_implementation.gif "Implemnt")
+### Proof of concept
 
-Visit Site :- https://hiteshsahu.github.io/Material-Music-Player-Dashboard/. 
+![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/proof_of_concept_implementation.gif "Implemnt")
 
+### What it does
+ - Beautiful Play Pause Animation
+ - Seek bar to control song progress
+ - Show current PlayBack Time
+ - Album art loading with Glide
+ - Display inbuild 4 Visualizer
+ 
+### Included in demo
+ - Fetch and Play songs from SD card
+ - Display Album art effeciently
+ - Change songs with viewpager
+ - Auto play next song
+
+ 
+ 
+#ScreenShots
+
+ ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/1.jpg "Implemnt") 
+ ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/2.jpg "Implemnt") 
+ ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/3.jpg "Implemnt")
+ ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/4.jpg "Implemnt")
+ ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/5.jpg "Implemnt")
+
+##Visit Site :- [Material-Music-Player-Dashboard](https://hiteshsahu.github.io/Material-Music-Player-Dashboard/). 
 
 Copyright 2015 Hitesh Kumar Sahu
 
