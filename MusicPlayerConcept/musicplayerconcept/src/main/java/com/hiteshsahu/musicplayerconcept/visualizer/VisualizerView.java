@@ -1,11 +1,12 @@
 /**
  * Copyright 2011, Felix Palmer
- * <p/>
+ * <p>
  * Licensed under the MIT license:
  * http://creativecommons.org/licenses/MIT/
  */
 package com.hiteshsahu.musicplayerconcept.visualizer;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -18,6 +19,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -44,18 +46,44 @@ public class VisualizerView extends View {
     private Paint mFlashPaint = new Paint();
     private Paint mFadePaint = new Paint();
 
-    public VisualizerView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs);
+    public VisualizerView(Context context) {
+        super(context);
+
         init();
     }
 
     public VisualizerView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        init();
     }
 
-    public VisualizerView(Context context) {
-        this(context, null, 0);
+    public VisualizerView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+
+        init();
     }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public VisualizerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init();
+    }
+
+//
+//    public VisualizerView(Context context) {
+//        this(context, null, 0);
+//    }
+//
+//    public VisualizerView(Context context, AttributeSet attrs) {
+//        this(context, attrs, 0);
+//    }
+//
+//    public VisualizerView(Context context, AttributeSet attrs, int defStyle) {
+//        super(context, attrs);
+//        init();
+//    }
+
 
     private void init() {
         mBytes = null;
@@ -70,15 +98,18 @@ public class VisualizerView extends View {
 
     /**
      * Links the visualizer to a player
+     *
      * @param player - MediaPlayer instance to link to
      */
     public void link(MediaPlayer player) {
+
         if (player == null) {
             throw new NullPointerException("Cannot link to null MediaPlayer");
         }
 
         // Create the Visualizer object and attach it to our media player.
         mVisualizer = new Visualizer(player.getAudioSessionId());
+
         mVisualizer.setCaptureSize(Visualizer.getCaptureSizeRange()[1]);
 
         // Pass through Visualizer data to VisualizerView
@@ -101,6 +132,7 @@ public class VisualizerView extends View {
 
         // Enabled Visualizer and disable when we're done with the stream
         mVisualizer.setEnabled(true);
+
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
@@ -131,6 +163,7 @@ public class VisualizerView extends View {
      * Pass data to the visualizer. Typically this will be obtained from the
      * Android Visualizer.OnDataCaptureListener call back. See
      * {@link Visualizer.OnDataCaptureListener#onWaveFormDataCapture }
+     *
      * @param bytes
      */
     public void updateVisualizer(byte[] bytes) {
@@ -142,6 +175,7 @@ public class VisualizerView extends View {
      * Pass FFT data to the visualizer. Typically this will be obtained from the
      * Android Visualizer.OnDataCaptureListener call back. See
      * {@link Visualizer.OnDataCaptureListener#onFftDataCapture }
+     *
      * @param bytes
      */
     public void updateVisualizerFFT(byte[] bytes) {

@@ -1,7 +1,9 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="120dp"
+    android:background="@android:color/transparent">
 
     <RelativeLayout
         android:id="@+id/song_progress_container"
@@ -17,43 +19,36 @@
             android:layout_height="60dp"
             android:layout_above="@+id/song_progress"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/time_lapse" />
+            android:layout_marginRight="100dp"
+            android:alpha="0" />
 
-        <TextView
-            android:id="@+id/time_lapse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="45dp"
-            android:text="03:30"
-            android:textColor="#7F7F7F"
-            android:textSize="15sp" />
 
-        <ProgressBar
+        <SeekBar
             android:id="@+id/song_progress"
-            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/time_lapse"
+            android:layout_marginRight="100dp"
+            android:alpha="0"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
             android:indeterminate="false"
             android:max="100"
             android:progress="30" />
-
     </RelativeLayout>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/song_info_container"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_gravity="bottom"
-        android:background="@color/cardview_light_background">
+        android:layout_gravity="bottom">
 
         <android.support.v7.widget.CardView
             android:id="@+id/thumb_container"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="#E6E6E6"
+            card_view:cardElevation="10dp">
 
             <ImageView
                 android:id="@+id/album_art"
@@ -67,9 +62,17 @@
             android:id="@+id/song_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/thumb_container"
+            android:background="@color/cardview_light_background"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:text="On The wire"
             android:textAllCaps="true"
             android:textColor="#7F7F7F"
@@ -77,13 +80,22 @@
 
         <TextView
             android:id="@+id/album_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/song_name"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/clock"
             android:layout_toRightOf="@+id/thumb_container"
+            android:background="@color/cardview_light_background"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:text="Monte Are I"
             android:textColor="#D1D1D7"
             android:textSize="15sp" />
@@ -97,6 +109,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/total_time"
+            android:background="@color/cardview_light_background"
             android:src="@android:drawable/presence_away" />
 
         <TextView
@@ -105,8 +118,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/song_name"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
+            android:background="@color/cardview_light_background"
+            android:gravity="right"
             android:text="03:30"
             android:textColor="#7F7F7F"
             android:textSize="15sp" />
@@ -125,18 +141,5 @@
         app:layout_anchor="@id/song_progress_container"
         app:layout_anchorGravity="top|right|end"
         app:pressedTranslationZ="12dp" />
-
-   <!-- <android.support.design.widget.FloatingActionButton
-        android:id="@+id/pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:clickable="true"
-        android:src="@drawable/vinyl"
-        android:background="@drawable/vinyl"
-        app:elevation="6dp"
-        app:layout_anchor="@id/song_progress_container"
-        app:layout_anchorGravity="top|right|end"
-        app:pressedTranslationZ="12dp" />-->
 
 </android.support.design.widget.CoordinatorLayout>

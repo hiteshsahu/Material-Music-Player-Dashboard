@@ -1,10 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hiteshsahu.musicplayerconcept">
 
-    <application android:allowBackup="true"
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
         android:label="@string/app_name"
-        android:supportsRtl="true"
->
+        android:supportsRtl="true">
 
     </application>
 

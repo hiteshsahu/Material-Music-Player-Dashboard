@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="demo.PlayerActivity">
+    tools:context=".view.activity.PlayerActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,19 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/dashboard_player" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/slidingPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controls"
+        android:layout_marginTop="?attr/actionBarSize" />
 
+    <com.hiteshsahu.musicplayerconcept.widget.MusicDashBoardLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom" />
 
 </android.support.design.widget.CoordinatorLayout>

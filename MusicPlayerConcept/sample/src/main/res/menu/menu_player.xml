@@ -1,10 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="demo.PlayerActivity">
+    tools:context=".view.activity.PlayerActivity">
+
     <item
         android:id="@+id/action_settings"
+        android:icon="@android:drawable/ic_menu_manage"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_fork"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
 </menu>
