@@ -10,7 +10,9 @@ Music Player based on Ui inspiration form [UpLabs Story - Can you code this UI c
 
 ### Proof of concept
 
-![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/proof_of_concept_implementation.gif "Implemnt")
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=dDZgwz_60Mo
+" target="_blank"><img src="http://img.youtube.com/vi/dDZgwz_60Mo/0.jpg" 
+alt="Proof of concept" width="500" height="380" border="10" /></a>
 
 ### What it does
  - Beautiful Play Pause Animation
@@ -26,8 +28,7 @@ Music Player based on Ui inspiration form [UpLabs Story - Can you code this UI c
  - Auto play next song
 
  
- 
-#ScreenShots
+###ScreenShots
 
  ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/1.jpg "Implemnt") 
  ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/2.jpg "Implemnt") 
@@ -36,6 +37,10 @@ Music Player based on Ui inspiration form [UpLabs Story - Can you code this UI c
  ![Alt text](https://github.com/hiteshsahu/Material-Music-Player-Dashboard/blob/master/MusicPlayerConcept/Art/5.jpg "Implemnt")
 
 ##Visit Site :- [Material-Music-Player-Dashboard](https://hiteshsahu.github.io/Material-Music-Player-Dashboard/). 
+
+## How to use
+
+JCenter support is yet to implement, Meanwhile you can dig aar file in release folder or import library in Android studio. The Demo app could be good start.
 
 Copyright 2015 Hitesh Kumar Sahu
 
